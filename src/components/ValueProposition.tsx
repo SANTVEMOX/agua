@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useInView, type Variants } from 'framer-motion';
 import { Biohazard, Droplets, TestTube2, Activity } from 'lucide-react';
 
