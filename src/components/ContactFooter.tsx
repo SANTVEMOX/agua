@@ -3,23 +3,23 @@ import { Droplet } from 'lucide-react';
 export const ContactFooter = () => {
   return (
     <>
-      <section id="contacto" className="py-24 bg-altpro-navy text-altpro-white relative overflow-hidden">
+      <section id="contacto" className="py-16 sm:py-24 bg-altpro-navy text-altpro-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-altpro-blue/10 to-transparent pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-10 sm:gap-16 relative z-10">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">El siguiente paso en la evolución del agua.</h2>
-            <p className="text-altpro-graySec text-lg mb-8">Conoce ALTpro y explora las posibilidades de una nueva generación de dispensadores inteligentes.</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">El siguiente paso en la evolución del agua.</h2>
+            <p className="text-altpro-graySec text-base sm:text-lg mb-8">Conoce ALTpro y explora las posibilidades de una nueva generación de dispensadores inteligentes.</p>
             <div className="flex gap-4">
               <div className="w-16 h-1 bg-altpro-blue rounded-full" />
               <div className="w-4 h-1 bg-altpro-tech rounded-full" />
             </div>
           </div>
 
-          <div className="bg-altpro-white p-8 rounded-3xl text-altpro-black shadow-2xl">
+          <div className="bg-altpro-white p-5 sm:p-8 rounded-3xl text-altpro-black shadow-2xl">
             <h3 className="text-2xl font-bold mb-6">Solicitar información</h3>
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-medium text-altpro-graySec mb-1">Nombre</label>
                   <input type="text" className="w-full px-4 py-2 rounded-lg border border-altpro-graySec/30 focus:outline-none focus:border-altpro-blue" placeholder="Tu nombre" />

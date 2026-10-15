@@ -65,12 +65,13 @@ const fadeUpItem: Variants = {
 };
 
 // --- COMPONENTE DE TARJETA ---
+// Móvil: borde visible (no hay hover en pantallas táctiles). Desde sm: vuelve a transparent, como el original.
 const ContaminantCard = ({ data }: { data: typeof contaminants[0] }) => (
   <motion.div 
     variants={fadeUpItem}
-    className={`group relative p-10 border border-transparent ${data.border} ${data.bg} rounded-[2rem] transition-all duration-500 flex flex-col h-full bg-altpro-white`}
+    className={`group relative p-8 sm:p-10 border border-altpro-graySec/20 sm:border-transparent ${data.border} ${data.bg} rounded-[2rem] transition-all duration-500 flex flex-col h-full bg-altpro-white`}
   >
-    <div className="flex justify-between items-start mb-16">
+    <div className="flex justify-between items-start mb-10 sm:mb-16">
       <div className={`transition-transform duration-500 group-hover:scale-110 ${data.color}`}>
         {data.icon}
       </div>
@@ -99,7 +100,7 @@ export const ValueProposition = () => {
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
   return (
-    <section className="relative py-32 bg-altpro-grayLight/30 overflow-hidden" ref={containerRef}>
+    <section className="relative py-20 sm:py-32 bg-altpro-grayLight/30 overflow-hidden" ref={containerRef}>
       
       <motion.div 
         className="max-w-[1440px] mx-auto px-6 lg:px-12"
@@ -109,17 +110,17 @@ export const ValueProposition = () => {
       >
         
         {/* Cabecera Minimalista */}
-        <div className="max-w-4xl mb-24">
-          <motion.div variants={fadeUpItem} className="flex items-center gap-4 mb-8">
-            <div className="h-[1px] w-12 bg-altpro-blue" />
-            <span className="text-xs font-bold tracking-[0.2em] text-altpro-blue uppercase">
+        <div className="max-w-4xl mb-12 sm:mb-24">
+          <motion.div variants={fadeUpItem} className="flex items-center gap-4 mb-6 sm:mb-8">
+            <div className="h-[1px] w-12 shrink-0 bg-altpro-blue" />
+            <span className="text-xs font-bold tracking-[0.12em] sm:tracking-[0.2em] text-altpro-blue uppercase">
               Lo que eliminamos para tu seguridad
             </span>
           </motion.div>
           
           <motion.h2 
             variants={fadeUpItem}
-            className="text-4xl md:text-5xl lg:text-6xl font-medium text-altpro-black tracking-tight leading-[1.1]"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-altpro-black tracking-tight leading-[1.1]"
           >
             Los únicos a nivel nacional que nos preocupamos por lo que{' '}
             <span className="text-altpro-graySec">nadie se preocupa.</span>

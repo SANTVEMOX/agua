@@ -25,18 +25,24 @@ export const HowItWorks = () => {
   ];
 
   return (
-    <section id="como-funciona" className="py-24 bg-altpro-white">
+    <section id="como-funciona" className="py-16 sm:py-24 bg-altpro-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Tecnología que trabaja en segundo plano.</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-16">Tecnología que trabaja en segundo plano.</h2>
         
         <div className="grid md:grid-cols-4 gap-8 relative">
           {steps.map((step, idx) => (
-            <div key={idx} className="relative z-10 flex flex-col items-center text-center group">
-              <div className="w-16 h-16 rounded-2xl bg-altpro-grayLight border border-altpro-graySec/20 flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
+            <div
+              key={idx}
+              className="relative z-10 flex flex-row sm:flex-col items-start sm:items-center text-left sm:text-center gap-4 sm:gap-0 group"
+            >
+              <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-2xl bg-altpro-grayLight border border-altpro-graySec/20 flex items-center justify-center mb-0 sm:mb-6 shadow-sm group-hover:scale-105 transition-transform">
                 {step.icon}
               </div>
-              <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-              <p className="text-sm text-altpro-graySec">{step.desc}</p>
+              {/* En móvil el texto va al lado del ícono; desde sm el contenedor desaparece (contents) y todo queda como el original */}
+              <div className="sm:contents">
+                <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                <p className="text-sm text-altpro-graySec">{step.desc}</p>
+              </div>
               
               {/* Flecha conectora (desktop) */}
               {idx < steps.length - 1 && (

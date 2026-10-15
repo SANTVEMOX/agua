@@ -1,15 +1,15 @@
 export const FiltrationSystem = () => {
   return (
-    <section id="tecnologia" className="py-24 bg-altpro-grayLight">
+    <section id="tecnologia" className="py-16 sm:py-24 bg-altpro-grayLight">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 className="text-4xl font-bold tracking-tight text-altpro-black mb-12 uppercase border-b-4 border-altpro-blue pb-4 inline-block">
+        <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-altpro-black mb-8 sm:mb-12 uppercase border-b-4 border-altpro-blue pb-4 inline-block">
           Tren de Filtración de 3 Etapas
         </h2>
 
         <div className="grid lg:grid-cols-3 gap-0 border border-altpro-black bg-altpro-white">
           
           {/* Etapa 1 */}
-          <div className="p-10 border-b lg:border-b-0 lg:border-r border-altpro-black hover:bg-altpro-grayLight/50 transition-colors">
+          <div className="p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-altpro-black hover:bg-altpro-grayLight/50 transition-colors">
             <div className="text-4xl font-black text-altpro-graySec mb-4">01</div>
             <h3 className="text-xl font-bold text-altpro-black mb-4 uppercase">Filtración Física</h3>
             <p className="text-altpro-graySec text-sm leading-relaxed mb-6">
@@ -19,7 +19,7 @@ export const FiltrationSystem = () => {
           </div>
 
           {/* Etapa 2 */}
-          <div className="p-10 border-b lg:border-b-0 lg:border-r border-altpro-black hover:bg-altpro-grayLight/50 transition-colors">
+          <div className="p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-altpro-black hover:bg-altpro-grayLight/50 transition-colors">
             <div className="text-4xl font-black text-altpro-blue mb-4">02</div>
             <h3 className="text-xl font-bold text-altpro-black mb-4 uppercase">Carbón Activado</h3>
             <p className="text-altpro-graySec text-sm leading-relaxed mb-6">
@@ -29,7 +29,7 @@ export const FiltrationSystem = () => {
           </div>
 
           {/* Etapa 3 */}
-          <div className="p-10 hover:bg-altpro-grayLight/50 transition-colors">
+          <div className="p-6 sm:p-10 hover:bg-altpro-grayLight/50 transition-colors">
             <div className="text-4xl font-black text-altpro-tech mb-4">03</div>
             <h3 className="text-xl font-bold text-altpro-black mb-4 uppercase">Resina PS-DVB</h3>
             <p className="text-altpro-graySec text-sm leading-relaxed mb-6">

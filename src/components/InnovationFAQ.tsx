@@ -12,8 +12,8 @@ export const InnovationFAQ = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-altpro-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16">
+    <section className="py-16 sm:py-24 bg-altpro-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-10 sm:gap-16">
         
         {/* Innovación */}
         <div>
@@ -24,7 +24,7 @@ export const InnovationFAQ = () => {
           <ul className="space-y-4">
             {['Investigación y desarrollo de materiales avanzados.', 'Integración de sensores compactos.', 'Automatización y seguridad preventiva (Fail-Safe).', 'Validación empírica de parámetros críticos.'].map((item, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-altpro-blue mt-2" />
+                <span className="w-1.5 h-1.5 shrink-0 rounded-full bg-altpro-blue mt-2" />
                 <span className="text-sm text-altpro-black font-medium">{item}</span>
               </li>
             ))}
@@ -37,10 +37,10 @@ export const InnovationFAQ = () => {
             <div key={idx} className="border border-altpro-graySec/20 rounded-xl overflow-hidden">
               <button 
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                className="w-full px-6 py-4 flex justify-between items-center text-left bg-altpro-grayLight/30 hover:bg-altpro-grayLight/60 transition-colors"
+                className="w-full px-6 py-4 flex justify-between items-center gap-3 sm:gap-0 text-left bg-altpro-grayLight/30 hover:bg-altpro-grayLight/60 transition-colors"
               >
                 <span className="font-semibold text-sm">{faq.q}</span>
-                <ChevronDown size={18} className={`transform transition-transform ${openIdx === idx ? 'rotate-180' : ''}`} />
+                <ChevronDown size={18} className={`shrink-0 transform transition-transform ${openIdx === idx ? 'rotate-180' : ''}`} />
               </button>
               {openIdx === idx && (
                 <div className="px-6 py-4 text-sm text-altpro-graySec bg-altpro-white">

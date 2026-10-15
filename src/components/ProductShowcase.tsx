@@ -2,22 +2,22 @@ import { Settings2, RefreshCw, Droplets } from 'lucide-react';
 
 export const ProductShowcase = () => {
   return (
-    <section className="py-24 bg-altpro-white">
+    <section className="py-16 sm:py-24 bg-altpro-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-altpro-black mb-6">
             Diseñado para integrarse.<br />Desarrollado para evolucionar.
           </h2>
-          <p className="text-altpro-graySec text-lg">
+          <p className="text-altpro-graySec text-base sm:text-lg">
             Un diseño industrial compacto que prioriza la funcionalidad comercial, la visibilidad de los procesos y la facilidad de mantenimiento.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
           {/* Imagen / Render del Producto */}
-          <div className="relative aspect-square rounded-3xl bg-altpro-grayLight overflow-hidden border border-altpro-graySec/20 flex items-center justify-center p-8">
+          <div className="relative aspect-[4/5] sm:aspect-square rounded-3xl bg-altpro-grayLight overflow-hidden border border-altpro-graySec/20 flex items-center justify-center p-6 sm:p-8">
             <div className="absolute inset-0 bg-gradient-to-t from-altpro-black/5 to-transparent" />
-            <div className="w-full max-w-sm aspect-[3/4] bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col relative z-10">
+            <div className="w-[85%] sm:w-full max-w-sm aspect-[3/4] bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col relative z-10">
               {/* Pantalla Superior */}
               <div className="h-2/5 bg-altpro-black rounded-t-2xl p-4 flex flex-col justify-between">
                 <div className="w-full h-2 bg-altpro-white/10 rounded-full" />
@@ -41,8 +41,8 @@ export const ProductShowcase = () => {
           </div>
 
           {/* Características Técnicas */}
-          <div className="space-y-12">
-            <div className="flex gap-6">
+          <div className="space-y-8 sm:space-y-12">
+            <div className="flex gap-4 sm:gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-altpro-grayLight flex items-center justify-center border border-altpro-graySec/20">
                 <Settings2 className="text-altpro-navy" size={24} />
               </div>
@@ -52,7 +52,7 @@ export const ProductShowcase = () => {
               </div>
             </div>
 
-            <div className="flex gap-6">
+            <div className="flex gap-4 sm:gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-altpro-grayLight flex items-center justify-center border border-altpro-graySec/20">
                 <RefreshCw className="text-altpro-navy" size={24} />
               </div>
@@ -62,7 +62,7 @@ export const ProductShowcase = () => {
               </div>
             </div>
 
-            <div className="flex gap-6">
+            <div className="flex gap-4 sm:gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-altpro-grayLight flex items-center justify-center border border-altpro-graySec/20">
                 <Droplets className="text-altpro-navy" size={24} />
               </div>

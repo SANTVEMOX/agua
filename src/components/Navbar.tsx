@@ -68,10 +68,12 @@ export const Navbar = () => {
           </a>
         </nav>
 
+        {/* Móvil: botón con área táctil de 48 px (solo se ve en < md) */}
         <button 
-          className="md:hidden z-50 text-altpro-black p-2 -mr-2"
+          className="md:hidden z-50 text-altpro-black p-3 -mr-3"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Alternar menú"
+          aria-expanded={isOpen}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -83,7 +85,7 @@ export const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 bg-altpro-white pt-24 px-6 md:hidden flex flex-col gap-6 h-screen"
+            className="fixed inset-0 bg-altpro-white pt-24 pb-10 px-6 md:hidden flex flex-col gap-6 h-screen overflow-y-auto"
           >
             {navLinks.map((link) => (
               <a 
